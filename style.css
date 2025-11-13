@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+:root {
+  --primary-color: rgb(1, 7, 94);
+  --secondary-color: #ffffff;
+  --loader-color: rgb(1, 7, 94);
+}
+
+/* Ajout de l'image de fond à la page */
+body {
+  background-image: url('NY.jpeg'); /* Remplace 'ton-image.jpg' par le chemin de ton image */
+  background-size: cover; /* Pour que l'image couvre toute la largeur et la hauteur */
+  background-position: center center; /* Centrer l'image */
+  background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
+  position: relative;
+}
+
+/* Superposition semi-transparente pour améliorer la lisibilité du texte */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent noir */
+  z-index: -1; /* Placer l'overlay derrière le contenu */
+}
+
+/* Le loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--loader-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  animation: fadeOut 3s forwards; 
+  animation-delay: 5s; /* temporisation avant disparition */
+}
+
+#loader h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+#loader h1 span {
+  display: inline-block; /* nécessaire pour l'animation des points (permet l'utilisation de translateY() */ 
+  animation: bounce 2s infinite;
+}
+
+/* Délai pour l'animation de chaque point */
+#loader h1 span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#loader h1 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#loader h1 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 6%;
+}
+.logo {
+  font-size: 40px;
+  font-weight: 500;
+}
+.logo span {
+  color: var(--primary-color);
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  padding: 8px 12px;
+  list-style: none;
+}
+ul li a {
+  color: var(--loader-color);
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.5s;
+}
+ul li a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+ul li:last-child a:hover{
+  color: var(--primary-color);
+  border-bottom: none;
+}
+
+nav button {
+  background: var(--primary-color);
+  padding: 8px 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  padding: 80px 80px;
+  color: #fff; /* Texte blanc pour contraster avec le fond */
+}
+
+.text h1 {
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre légère pour le texte */
+}
+
+.text span,
+.argument {
+  color: var(--primary-color);
+}
+
+.text p {
+  max-width: 45%;
+  margin: 20px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre légère pour le texte */
+}
+
+.btn {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 15px 30px;
+  display: flex;
+  margin-top: 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  letter-spacing: 5px;
+}
+
+.quarter-circle {
+  position: fixed;
+  background: var(--primary-color);
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  border-top-left-radius: 100%;
+}
+
+.quarter-circle-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.quarter-circle-img img {
+  width: 90%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.quarter-circle-img img:hover {
+  transform: scale(0.75);
+}
+
+/* ---------------------------------------------------------------------- ANIMATIONS ---------------------------------------------------------------------------------------------*/
+
+/* Rebond des points (chargement) */
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #ff0000;
+  transform: rotateY(70deg);
+  animation-delay: .4s;
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
