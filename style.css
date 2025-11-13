@@ -5,30 +5,9 @@
   font-family: 'poppins', sans-serif;
 }
 :root {
-  --primary-color: rgb(1, 7, 94);
+  --primary-color: rgb(255, 115, 0);
   --secondary-color: #ffffff;
   --loader-color: rgb(1, 7, 94);
-}
-
-/* Ajout de l'image de fond à la page */
-body {
-  background-image: url('NY.jpeg'); /* Remplace 'ton-image.jpg' par le chemin de ton image */
-  background-size: cover; /* Pour que l'image couvre toute la largeur et la hauteur */
-  background-position: center center; /* Centrer l'image */
-  background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
-  position: relative;
-}
-
-/* Superposition semi-transparente pour améliorer la lisibilité du texte */
-body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent noir */
-  z-index: -1; /* Placer l'overlay derrière le contenu */
 }
 
 /* Le loader */
@@ -47,10 +26,11 @@ body::after {
   visibility: visible;
   animation: fadeOut 3s forwards; 
   animation-delay: 5s; /* temporisation avant disparition */
+
 }
 
 #loader h1 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 2rem;
 }
 
@@ -59,31 +39,80 @@ body::after {
   animation: bounce 2s infinite;
 }
 
-/* Délai pour l'animation de chaque point */
-#loader h1 span:nth-child(1) {
-  animation-delay: 0s;
+/* Ajout de l'image de fond à la page */
+body {
+  background-image: url('NY.jpg'); /* Remplace 'ton-image.jpg' par le chemin de ton image */
+  background-size: cover; /* Pour que l'image couvre toute la largeur et la hauteur */
+  background-position: center center; /* Centrer l'image */
+  background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
+  position: relative;
+  height: 100vh;
+  border-radius: 0; /* Aucune bordure arrondie ici */
+  margin: 0;
 }
 
-#loader h1 span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-#loader h1 span:nth-child(3) {
-  animation-delay: 0.4s;
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 20px;
+  color: #fff; /* Texte blanc pour contraster avec le fond */
+  text-align: center;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2% 6%;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative;
+  z-index: 100;
 }
-.logo {
-  font-size: 40px;
-  font-weight: 500;
+.header-left p {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0px; /* Espacement entre les éléments */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.logo span {
-  color: var(--primary-color);
+
+/* Style du bouton pour enlever les bordures et l'apparence par défaut */
+.destination-btn {
+  background: none; /* Pas de fond */
+  border: none; /* Pas de bordure */
+  color: white; /* Couleur du texte */
+  font-size: 18px; /* Taille du texte */
+  text-align: left; /* Aligner le texte à gauche */
+  cursor: pointer; /* Coursur en forme de main */
+  font-weight: normal; /* Si tu veux enlever le gras */
+  text-decoration: none; /* Enlève toute décoration de texte (si tu avais un lien) */
+}
+
+.destination-btn:hover {
+  color: var(--primary-color); /* Effet au survol */
+}
+
+.header-right a {
+  color: white; /* Couleur des icônes */
+  margin-left: 25px; /* Espacement entre les icônes */
+  font-size: 24px; /* Taille des icônes */
+  transition: color 0.3s ease-in-out;
+}
+
+.header-right a:hover {
+  color: var(--primary-color); /* Changer la couleur au survol */
+}
+
+.header-right i {
+  margin-left: 20px; /* Espacement entre les icônes */
+}
+
+.header-right a:focus {
+  outline: none; 
 }
 
 ul {
@@ -95,7 +124,7 @@ ul li {
   list-style: none;
 }
 ul li a {
-  color: var(--loader-color);
+  color: #fff;
   text-decoration: none;
   font-size: 17px;
   transition: 0.5s;
@@ -124,26 +153,20 @@ nav button:hover {
   color: var(--primary-color);
 }
 
-.text {
-  position: relative;
-  z-index: 1;
-  padding: 80px 80px;
-  color: #fff; /* Texte blanc pour contraster avec le fond */
-}
+
 
 .text h1 {
-  font-size: 50px;
+  font-size: 60px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre légère pour le texte */
 }
 
-.text span,
-.argument {
+.text span {
   color: var(--primary-color);
 }
 
 .text p {
-  max-width: 45%;
-  margin: 20px 0;
+  max-width: 100%;
+  margin: 2px 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre légère pour le texte */
 }
 
@@ -163,35 +186,8 @@ nav button:hover {
   letter-spacing: 5px;
 }
 
-.quarter-circle {
-  position: fixed;
-  background: var(--primary-color);
-  bottom: 0;
-  right: 0;
-  width: 600px;
-  height: 600px;
-  border-top-left-radius: 100%;
-}
-
-.quarter-circle-img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.quarter-circle-img img {
-  width: 90%;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.quarter-circle-img img:hover {
-  transform: scale(0.75);
-}
-
 /* ---------------------------------------------------------------------- ANIMATIONS ---------------------------------------------------------------------------------------------*/
-
-/* Rebond des points (chargement) */
+/* --icone de chargement--*/
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
@@ -200,26 +196,72 @@ nav button:hover {
   height: 48px;
   color: #fff;
 }
-.loader:before,
-.loader:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-  transform: rotateX(70deg);
-  animation: 1s spin linear infinite;
-}
-.loader:after {
-  color: #ff0000;
-  transform: rotateY(70deg);
-  animation-delay: .4s;
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+  .loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
 }
 
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
 
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
+/* Animation de disparition (loader)*/
 @keyframes fadeOut {
   0% {
     opacity: 1;
