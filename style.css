@@ -92,34 +92,33 @@ header {
   text-transform: uppercase;
 }
 
-/* Style du bouton pour enlever les bordures et l'apparence par défaut */
 .destination-btn {
-  background: none; /* Pas de fond */
-  border: none; /* Pas de bordure */
-  color: white; /* Couleur du texte */
-  font-size: 11px; /* Taille du texte */
+  background: none; 
+  border: none; 
+  color: white; 
+  font-size: 11px; 
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease;
-  text-align: left; /* Aligner le texte à gauche */
-  font-weight: 500; /* Si tu veux enlever le gras */
-  text-decoration: none; /* Enlève toute décoration de texte (si tu avais un lien) */
+  text-align: left; 
+  font-weight: 500; 
+  text-decoration: none; 
 }
 
 .destination-btn:hover {
-  color: var(--primary-color); /* Effet au survol */
+  color: var(--primary-color); 
 }
 
 .header-right a {
-  color: white; /* Couleur des icônes */
-  margin-left: 25px; /* Espacement entre les icônes */
-  font-size: 22px; /* Taille des icônes */
+  color: white; 
+  margin-left: 25px; 
+  font-size: 22px; 
   transition: color 0.3s ease-in-out;
 }
 
 .header-right a:hover {
-  color: var(--primary-color); /* Changer la couleur au survol */
+  color: var(--primary-color); 
 }
 
 .header-right a:focus {
@@ -127,7 +126,7 @@ header {
 }
 
 main {
-  margin-top: 120px;             /* Décale ton contenu principal sous le header */
+  margin-top: 120px;             
 }
 
 .text {
@@ -137,14 +136,14 @@ main {
   transform: translate(-50%, -50%);
   z-index: 2;
   padding: 20px;
-  color: #fff; /* Texte blanc pour contraster avec le fond */
+  color: #fff; 
   text-align: center;
 }
 
 .text h1 {
   font-size: 75px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre légère pour le texte */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   margin-bottom: 10px;
   font-family: 'Playfair Display', serif;
 }
@@ -156,7 +155,7 @@ main {
 .text p {
   max-width: 100%;
   margin: 2px 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre légère pour le texte */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
 }
 
 
@@ -165,12 +164,12 @@ main {
   letter-spacing: 1px;
   font-weight: 300;
   color: #f3f3f3;
-  margin: 0 auto 40px auto; /* centrage horizontal */
+  margin: 0 auto 40px auto; 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   font-family: 'Montserrat', sans-serif;
   display: block;
   text-align: center;
-  max-width: 450px; /* ✅ largeur visuelle proche du titre*/
+  max-width: 450px; 
 }
 
 .btn {
@@ -189,7 +188,7 @@ main {
   letter-spacing: 5px;
 }
 
-/* Barre de recherche */
+
 .search-container {
   margin-top: 30px;
   display: flex;
@@ -198,8 +197,8 @@ main {
 }
 
 .search-container input {
-  width: 100%;           /* prend toute la largeur du conteneur */
-  max-width: 500px;      /* limite la largeur pour correspondre au texte */
+  width: 100%;           
+  max-width: 500px;      
   padding: 15px 20px;
   border-radius: 30px 0 0 30px;
   border: none;
@@ -221,6 +220,116 @@ main {
 }
 .search-container button:hover {
   background-color: rgb(255, 95, 0);
+}
+
+
+.destination-buttons {
+  display: flex;             
+  flex-wrap: wrap;            
+  justify-content: center;    
+  margin-top: 30px;           
+}
+
+
+.destination-bton {
+  background-color: rgba(255, 115, 0, 0.8); 
+  color: white;                           
+  border: none;                           
+  padding: 10px 20px;                      
+  margin: 5px;                             
+  border-radius: 25px;                    
+  font-size: 14px;                        
+  cursor: pointer;                      
+  transition: background-color 0.3s;       
+}
+
+.destination-bton:hover {
+  background-color: rgba(255, 115, 0, 0.6); 
+  color: #fff;                            
+}
+
+
+@media (max-width: 600px) {
+  .destination-buttons {
+    flex-direction: column;             
+    align-items: center;                 
+  }
+}
+
+.center-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px; 
+  position: relative;
+  z-index: 10;
+}
+
+.line {
+  border-top: 1px solid #fff; 
+  flex-grow: 0.1;  
+  margin: 0 15px; 
+}
+
+.bar-text {
+  color: rgb(255, 255, 255); 
+  font-size: 14px; 
+  font-weight: bold;
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+}
+
+@media (max-width: 768px) {
+  .bar-text {
+    font-size: 16px; 
+  }
+
+  .line {
+    margin: 0 10px; 
+  }
+}
+
+.extra-buttons {
+  display: flex;             
+  justify-content: center;  
+  gap: 20px;                  
+  margin-top: 30px;          
+}
+
+.extra-btn-container {
+  display: flex;                         
+  justify-content: center;                
+  gap: 20px;                              
+  margin-top: 20px;                        
+}
+
+.extra-btn {
+  background-color: rgba(255, 115, 0, 0.8);  
+  color: #fff;                           /
+  border: none;                           
+  padding: 15px 30px;                     
+  font-size: 14px;                         
+  border-radius: 25px;                     
+  cursor: pointer;                       
+  transition: background-color 0.3s, transform 0.3s; 
+  display: flex;                              
+  align-items: center;                       
+  gap: 10px;                                
+  justify-content: center;
+}
+
+.extra-btn i {
+  font-size: 20px;                           
+}
+
+/* Effet au survol des boutons */
+.extra-btn:hover {
+  background-color: rgba(255, 95, 0, 0.6); 
+  transform: scale(1.05); 
+}
+
+.extra-btn:focus {
+  outline: none; 
 }
 
 /* ---------------------------------------------------------------------- ANIMATIONS ---------------------------------------------------------------------------------------------*/
@@ -247,7 +356,7 @@ main {
     animation: 1s spin linear infinite;
   }
   .loader:after {
-    color: #FF3D00;
+    color: rgb(255, 115, 0);
     transform: rotateY(70deg);
     animation-delay: .4s;
   }
