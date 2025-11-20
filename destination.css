@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* importation police décriture */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+
+/* Supprimer l'image de fond spécifique à la page des destinations */
+body {
+  background-image: none; /* Supprimer l'image de fond */
+  background-color: white; /* Fond blanc pour la page des destinations */
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slogan {
+  font-size: 20px;
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.destination-list ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.destination-list li {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.destination-list a {
+  text-decoration: none;
+  color: #FF7300;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.destination-list a:hover {
+  color: #000;
+}
+
+.destination-btn {
+  background: none;
+  border: 1px solid #FF7300;
+  color: #FF7300;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.destination-btn:hover {
+  background-color: #FF7300;
+  color: white;
+}
+
+.background-text {
+  position: absolute;
+  top: 30%; /* Positionner le texte plus bas, selon tes préférences */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px; /* Taille du texte en grand */
+  color: rgba(0, 0, 0, 0.1); /* Gris clair, légèrement transparent */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: -1; /* Positionner le texte en arrière-plan */
+  white-space: nowrap; /* S'assurer que le texte ne se brise pas */
+  letter-spacing: 3px; /* Espacement entre les lettres */
+}
+
+/* Styles du bouton CTA */
+.cta-button-container {
+  display: flex;
+  justify-content: center; /* Centrer le bouton */
+  margin-top: 20px; /* Ajouter de l'espace au-dessus du bouton */
+}
+
+.cta-btn {
+  background-color: transparent; /* Fond transparent */
+  color: #000; /* Texte noir */
+  padding: 12px 30px; /* Espacement autour du texte */
+  font-size: 12px; /* Taille du texte */
+  border: 1px solid var(--primary-color); /* Bordure orange */
+  border-radius: 25px; /* Bords arrondis */
+  cursor: pointer;
+  text-transform: uppercase; /* Texte en majuscules */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animation au survol */
+}
+
+/* Effet au survol du bouton */
+.cta-btn:hover {
+  background-color: var(--primary-color); /* Fond orange au survol */
+  color: white; /* Texte blanc lors du survol */
+}
+
+
+/* destination.css */
+
+/* Styles pour le bouton fermer */
+.close-btn {
+  position: absolute;  /* Positionner le bouton en haut à gauche */
+  top: 30px;  /* Espacement du haut */
+  left: 50px;  /* Espacement de la gauche */
+  font-size: 20px;  /* Taille de la croix */
+  background-color: transparent;  /* Fond transparent */
+  color: #000;  /* Couleur de la croix */
+  border: none;  /* Pas de bordure */
+  cursor: pointer;  /* Curseur pointeur pour l'interaction */
+  z-index: 100;  /* S'assurer que le bouton soit au-dessus des autres éléments */
+  transition: color 0.3s;  /* Animation de couleur */
+}
+
+/* Effet au survol du bouton fermer */
+.close-btn:hover {
+  color: var(--primary-color);  /* Change la couleur au survol */
+}
+
