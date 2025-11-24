@@ -28,52 +28,6 @@ h1 {
   margin-top: 20px;
 }
 
-.slogan {
-  font-size: 20px;
-  text-align: center;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.destination-list ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 30px;
-}
-
-.destination-list li {
-  font-size: 18px;
-  margin: 15px 0;
-}
-
-.destination-list a {
-  text-decoration: none;
-  color: #FF7300;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.destination-list a:hover {
-  color: #000;
-}
-
-.destination-btn {
-  background: none;
-  border: 1px solid #FF7300;
-  color: #FF7300;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.destination-btn:hover {
-  background-color: #FF7300;
-  color: white;
-}
-
 .background-text {
   position: absolute;
   top: 30%; /* Positionner le texte plus bas, selon tes préférences */
@@ -118,22 +72,95 @@ h1 {
 
 /* destination.css */
 
-/* Styles pour le bouton fermer */
-.close-btn {
-  position: absolute;  /* Positionner le bouton en haut à gauche */
-  top: 30px;  /* Espacement du haut */
-  left: 50px;  /* Espacement de la gauche */
-  font-size: 20px;  /* Taille de la croix */
-  background-color: transparent;  /* Fond transparent */
-  color: #000;  /* Couleur de la croix */
-  border: none;  /* Pas de bordure */
-  cursor: pointer;  /* Curseur pointeur pour l'interaction */
-  z-index: 100;  /* S'assurer que le bouton soit au-dessus des autres éléments */
-  transition: color 0.3s;  /* Animation de couleur */
+/* Container du bouton fermer */
+.close-container {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espace entre l’icône et le texte */
+
+  cursor: pointer;
+  z-index: 200;
 }
 
-/* Effet au survol du bouton fermer */
-.close-btn:hover {
-  color: var(--primary-color);  /* Change la couleur au survol */
+/* Style du texte FERMER */
+.close-container span {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #000;
+  font-weight: 500;
+  transform: translateY(2px); /* alignement parfait avec l’icône */
 }
 
+/* Effet au survol */
+.close-container:hover span,
+.close-container:hover i {
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+/* Icône */
+.close-container i {
+  color: #000;
+}
+
+.destinations-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 0 40px;
+}
+
+/* ----- TITRES DES CONTINENTS ----- */
+
+.continent h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ----- LISTES ----- */
+
+.continent ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.continent li {
+  font-size: 14px;
+  margin-bottom: 1px;
+  color: #000;
+}
+
+.continent li:hover {
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* ----- RESPONSIVE ----- */
+
+@media (max-width: 900px) {
+  .destinations-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .destinations-container {
+    grid-template-columns: 1fr;
+  }
+
+  .titre-destination {
+    font-size: 35px;
+  }
+}

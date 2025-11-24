@@ -21,10 +21,38 @@
       <button class="destination-btn" onclick="window.location.href='destination.html';">Toutes nos destinations</button>
     </div>
     <nav class="header-right">
-      <a href="" title="Nous contacter"><span class="fa-solid fa-phone "></span></a>
-      <a href="" title="MENU"><span class="fa-solid fa-bars "></span></a>
+      <a href="#" title="Nous contacter"><span class="fa-solid fa-phone "></span></a>
+      <button id="menu-btn" title="MENU" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
     </nav>
   </header>
+
+  <div id="side-menu">
+    <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+
+    <ul>
+      <li><a href="#">Espace Client</a></li>
+
+      <li class="menu-title">Nos destinations</li>
+      <li><a href="destination.html">Voir toutes les destinations</a></li>
+
+      <li class="menu-title">Nos inspirations</li>
+      <li><a href="#">Inspirez-moi</a></li>
+
+      <li class="menu-title">Où et Quand Partir ?</li>
+      <li><a href="#">Voir le guide</a></li>
+
+      <li class="menu-title">Pourquoi voyager avec nous</li>
+      <li><a href="#">Découvrir</a></li>
+
+      <li class="menu-title">Qui sommes-nous ?</li>
+      <li><a href="#">En savoir plus à propos de moi</a></li>
+    </ul>
+  </div>
+
+<div id="menu-overlay"></div>
 
   <main class="text">
     <h1><span>Nath</span>Voyage</h1>
@@ -61,9 +89,31 @@
   </main>
 
   <div class="destination-circle">
-    <p class="destination-text">New York</p> 
+    <p class="destination-text">États-Unis</p> 
     <p class="destination-subtext">Voyagez dès maintenant !</p> 
   </div>
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const sideMenu = document.getElementById("side-menu");
+    const closeMenuBtn = document.querySelector(".close-menu");
+    const menuOverlay = document.getElementById("menu-overlay");
+
+    menuBtn.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      menuOverlay.classList.add("active");
+    });
+
+    closeMenuBtn.addEventListener("click", () => {
+      sideMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+    });
+
+    menuOverlay.addEventListener("click", () => {
+      sideMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+    });
+  </script>
 
 </body>
 
