@@ -1,0 +1,188 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+header {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header p {
+    margin-top: 10px;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- FILTERS --- */
+.filters {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.filter-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    border: 1px solid #ccc;     
+    background: transparent;     
+    color: #000;                
+    border-radius: 30px;       
+    font-size: 16px;           
+    cursor: pointer;          
+    transition: background 0.3s, color 0.3s;  
+}
+
+.filter-btn:hover {
+    background: #000;         
+    color: #fff;                 
+}
+
+
+.filter-btn span {
+    margin-left: 8px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    top: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.filter-option {
+    padding: 12px 16px;
+    text-align: left;
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.filter-option:hover {
+    background-color: #f1f1f1;
+}
+
+.budget-info {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* --- MAIN CONTENT --- */
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.destinations {
+    width: 35%;
+}
+
+.destinations h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.destinations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.destinations li {
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- GLOBE --- */
+.globe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    position: relative;
+    left: -300px;
+}
+
+.globe-image {
+    width: 650px;     
+    height: 650px;     
+    border-radius: 50%; 
+    border: none; 
+    margin-top: -50px;
+}
+
+.close-container {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espace entre l’icône et le texte */
+
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* Style du texte FERMER */
+.close-container span {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #000;
+  font-weight: 500;
+  transform: translateY(2px); /* alignement parfait avec l’icône */
+}
+
+/* Effet au survol */
+.close-container:hover span,
+.close-container:hover i {
+  opacity: 0.6;
+  transition: 0.2s;
+}

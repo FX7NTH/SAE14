@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Où et quand partir ?</title>
+    <link rel="stylesheet" href="ouetquand.css">
+    <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="close-container" onclick="window.location.href='index.html';">
+      <i class="fa-regular fa-circle-xmark fa-2x"></i>
+      <span>FERMER</span>
+    </div>
+
+    <h1>Où et quand partir ?</h1>
+    <p>Utiliser les filtres mois, budget et / ou durée pour trouver votre prochaine destination.</p>
+</header>
+
+<section class="filters">
+    <div class="filter-group">
+        <!-- Filtre par Mois -->
+        <div class="dropdown">
+            <button class="filter-btn">
+                PAR MOIS <span>▼</span>
+            </button>
+            <div class="dropdown-content">
+                <button class="filter-option">Janvier</button>
+                <button class="filter-option">Février</button>
+                <button class="filter-option">Mars</button>
+                <button class="filter-option">Avril</button>
+                <button class="filter-option">Mai</button>
+                <button class="filter-option">Juin</button>
+                <button class="filter-option">Juillet</button>
+                <button class="filter-option">Août</button>
+                <button class="filter-option">Septembre</button>
+                <button class="filter-option">Octobre</button>
+                <button class="filter-option">Novembre</button>
+                <button class="filter-option">Décembre</button>
+            </div>
+        </div>
+
+        <!-- Filtre par Budget -->
+        <div class="dropdown">
+            <button class="filter-btn">
+                PAR BUDGET <span>▼</span>
+            </button>
+            <div class="dropdown-content">
+                <button class="filter-option">Moins de 1000 €</button>
+                <button class="filter-option">De 1000 à 1500 €</button>
+                <button class="filter-option">De 1500 à 2000 €</button>
+                <button class="filter-option">De 2000 à 3000 €</button>
+                <button class="filter-option">3000 € et plus</button>
+            </div>
+        </div>
+
+        <!-- Filtre par Durée -->
+        <div class="dropdown">
+            <button class="filter-btn">
+                PAR DURÉE <span>▼</span>
+            </button>
+            <div class="dropdown-content">
+                <button class="filter-option">Moins de 4 jours</button>
+                <button class="filter-option">De 4 à 7 jours</button>
+                <button class="filter-option">De 7 à 15 jours</button>
+                <button class="filter-option">15 jours et plus</button>
+            </div>
+        </div>
+    </div>
+
+    <p class="budget-info">
+        <strong>*Information budget :</strong> En périodes de vacances scolaires, de fêtes et pour les demandes
+        de dernières minutes, il vous faudra ajouter environ 20% aux budgets indiqués.
+    </p>
+
+
+</section>
+
+<section class="content">
+    <div class="destinations">
+        <h2>LISTE DES DESTINATIONS</h2>
+        <ul>
+            <li>Afrique</li>
+            <li>Afrique du Nord & Moyen-Orient</li>
+            <li>Amérique du Nord</li>
+            <li>Amérique latine & Caraïbes</li>
+            <li>Asie</li>
+            <li>Europe du Nord</li>
+            <li>Europe du Sud</li>
+            <li>Ile & Océanie</li>
+        </ul>
+    </div>
+
+    <div class="globe-container">
+        <img src="globe.png" alt="Globe terrestre" class="globe-image">
+    </div>
+</section>
+
+</body>
+</html>
