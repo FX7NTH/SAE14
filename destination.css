@@ -14,10 +14,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 
-/* Supprimer l'image de fond spécifique à la page des destinations */
+
 body {
-  background-image: none; /* Supprimer l'image de fond */
-  background-color: white; /* Fond blanc pour la page des destinations */
+  background-image: none; 
+  background-color: white; 
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -30,47 +30,44 @@ h1 {
 
 .background-text {
   position: absolute;
-  top: 30%; /* Positionner le texte plus bas, selon tes préférences */
+  top: 30%; 
   left: 50%;
   transform: translateX(-50%);
-  font-size: 150px; /* Taille du texte en grand */
-  color: rgba(0, 0, 0, 0.1); /* Gris clair, légèrement transparent */
+  font-size: 150px; 
+  color: rgba(0, 0, 0, 0.1); 
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  z-index: -1; /* Positionner le texte en arrière-plan */
-  white-space: nowrap; /* S'assurer que le texte ne se brise pas */
-  letter-spacing: 3px; /* Espacement entre les lettres */
+  z-index: -1; 
+  white-space: nowrap;
+  letter-spacing: 3px; 
 }
 
-/* Styles du bouton CTA */
+
 .cta-button-container {
   display: flex;
-  justify-content: center; /* Centrer le bouton */
-  margin-top: 20px; /* Ajouter de l'espace au-dessus du bouton */
+  justify-content: center; 
+  margin-top: 20px; 
 }
 
 .cta-btn {
-  background-color: transparent; /* Fond transparent */
-  color: #000; /* Texte noir */
-  padding: 12px 30px; /* Espacement autour du texte */
-  font-size: 12px; /* Taille du texte */
-  border: 1px solid var(--primary-color); /* Bordure orange */
-  border-radius: 25px; /* Bords arrondis */
+  background-color: transparent; 
+  color: #000; 
+  padding: 12px 30px;
+  font-size: 12px; 
+  border: 1px solid var(--primary-color); 
+  border-radius: 25px; 
   cursor: pointer;
-  text-transform: uppercase; /* Texte en majuscules */
-  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animation au survol */
-}
+  text-transform: uppercase; 
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; 
 
 /* Effet au survol du bouton */
 .cta-btn:hover {
-  background-color: var(--primary-color); /* Fond orange au survol */
-  color: white; /* Texte blanc lors du survol */
+  background-color: var(--primary-color); 
+  color: white; 
 }
 
-
-/* destination.css */
 
 /* Container du bouton fermer */
 .close-container {
@@ -92,7 +89,7 @@ h1 {
   letter-spacing: 1px;
   color: #000;
   font-weight: 500;
-  transform: translateY(2px); /* alignement parfait avec l’icône */
+  transform: translateY(2px); 
 }
 
 /* Effet au survol */

@@ -30,7 +30,7 @@
   opacity: 1;
   visibility: visible;
   animation: fadeOut 3s forwards; 
-  animation-delay: 5s; /* temporisation avant disparition */
+  animation-delay: 5s; 
 
 }
 
@@ -40,16 +40,16 @@
 }
 
 #loader h1 span {
-  display: inline-block; /* nécessaire pour l'animation des points (permet l'utilisation de translateY() */ 
+  display: inline-block; 
   
 }
 
-/* style.css - Page d'accueil */
+
 body {
-  background-image: url('NY.jpg'); /* Image de fond de la page d'accueil */
-  background-size: cover; /* Couvre toute la largeur et la hauteur */
-  background-position: center center; /* Centrer l'image */
-  background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
+  background-image: url('NY.jpg'); 
+  background-size: cover; 
+  background-position: center center; 
+  background-attachment: fixed; 
   position: relative;
   height: 100vh;
   margin: 0;
@@ -58,13 +58,13 @@ body {
 
 body::before {
   content: "";
-  position: fixed;       /* couvre tout l’écran */
+  position: fixed;      
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* noir avec transparence (0.4 = 40%) */
-  z-index: 1;            /* derrière le texte mais devant l’image */
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 1;           
 }
 
 
@@ -87,7 +87,7 @@ header {
 .header-left p {
   text-decoration: none;
   font-size: 10px;
-  margin: 0px; /* Espacement entre les éléments */
+  margin: 0px; 
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -379,11 +379,11 @@ main {
   opacity: 0.9; 
 }
 
-/* ----- MENU LATERAL ----- */
+/* - MENU LATERAL - */
 #side-menu {
   position: fixed;
   top: 0;
-  right: -400px; /* Caché à droite */
+  right: -400px; 
   width: 350px;
   height: 100vh;
   background-color: #fff;
@@ -395,7 +395,7 @@ main {
 }
 
 #side-menu.active {
-  right: 0; /* Le menu apparaît */
+  right: 0; 
 }
 
 #side-menu ul {
@@ -427,7 +427,7 @@ main {
   font-weight: bold;
 }
 
-/* X fermeture */
+
 .close-menu {
   background: none;
   border: none;
@@ -438,7 +438,7 @@ main {
   right: 20px;
 }
 
-/* ----- FOND GRIS LORSQUE LE MENU EST OUVERT ----- */
+
 #menu-overlay {
   position: fixed;
   top: 0;
