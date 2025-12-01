@@ -61,6 +61,7 @@ h1 {
   cursor: pointer;
   text-transform: uppercase; 
   transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+}
 
 /* Effet au survol du bouton */
 .cta-btn:hover {
