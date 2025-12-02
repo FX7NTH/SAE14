@@ -3,40 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Idées de voyages</title>
-  <link rel="stylesheet" href="voyages.css">
+  <title>Voyages USA</title>
+  <link rel="stylesheet" href="usa.css">
+  <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <header>
+    <div class="close-container" onclick="window.location.href='index.html';">
+      <i class="fa-regular fa-circle-xmark fa-2x"></i>
+      <span>FERMER</span>
+    </div>
+  </header>
 
-<section class="trips-list">
+<section class="hero">
+  <h1>Nos idées de voyage aux Etats-Unis</h1>
 
-  <div class="trip-card">
-    <img src="canyon.jpg" alt="Monument Valley - USA" class="trip-img">
-    <div class="trip-info">
-      <h3 class="trip-title">L’Ouest mythique — Autotour Yosemite, Grand Canyon, Los Angeles…</h3>
-      <p class="trip-meta">19 jours / 17 nuits — à partir de 3100 €</p>
-      <div class="trip-actions">
-        <button class="btn">Voir la carte</button>
-        <button class="btn">Ajouter à mes favoris</button>
+  <div class="filters"> 
+    <span class="filter-title">FILTRER</span>
+
+    
+    <div class="dropdown">
+      <button class="filter-btn">PAR RÉGION <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Ouest Américain</button>
+        <button class="filter-option">Côte Est</button>
+        <button class="filter-option">Sud</button>
+        <button class="filter-option">Parcs Nationaux</button>
+        <button class="filter-option">Hawaii</button>
+        <button class="filter-option">Alaska</button>
       </div>
     </div>
-  </div>
 
-  <div class="trip-card">
-    <img src="new-york.jpg" alt="New York - USA" class="trip-img">
-    <div class="trip-info">
-      <h3 class="trip-title">New‑York & Côte Est — City break & découverte urbaine</h3>
-      <p class="trip-meta">7 jours / 6 nuits — à partir de 2200 €</p>
-      <div class="trip-actions">
-        <button class="btn">Voir la carte</button>
-        <button class="btn">Ajouter à mes favoris</button>
+  
+    <div class="dropdown">
+      <button class="filter-btn">PAR MOIS <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Janvier</button>
+        <button class="filter-option">Février</button>
+        <button class="filter-option">Mars</button>
+        <button class="filter-option">Avril</button>
+        <button class="filter-option">Mai</button>
+        <button class="filter-option">Juin</button>
+        <button class="filter-option">Juillet</button>
+        <button class="filter-option">Août</button>
+        <button class="filter-option">Septembre</button>
+        <button class="filter-option">Octobre</button>
+        <button class="filter-option">Novembre</button>
+        <button class="filter-option">Décembre</button>
       </div>
     </div>
+
+  
+    <div class="dropdown">
+      <button class="filter-btn">PAR BUDGET <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Moins de 1000 €</button>
+        <button class="filter-option">1000 à 1500 €</button>
+        <button class="filter-option">1500 à 2000 €</button>
+        <button class="filter-option">2000 à 3000 €</button>
+        <button class="filter-option">3000 € et plus</button>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="filter-btn">PAR DURÉE <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Moins de 4 jours</button>
+        <button class="filter-option">De 4 à 7 jours</button>
+        <button class="filter-option">De 7 à 15 jours</button>
+        <button class="filter-option">15 jours à plus</button>
+      </div>
+    </div>
+
+    <span class="sort-title">TRIER PAR</span>
+
+    <button class="filter-btn active">
+      <i class="fa-solid fa-crown"></i> POPULARITÉ <span class="arrow">▼</span>
+    </button>
+
+    <button class="filter-btn active"><i class="fa-regular fa-calendar"></i>DURÉE <span class="arrow">▼</span></button>
+    <button class="filter-btn active">€ PRIX <span class="arrow">▼</span></button>
+
   </div>
-
-  <!-- Répéter .trip-card pour chaque voyage  -->
-
 </section>
+
+<section class="trips-grid">
+  <div class="trip-card">
+    <img src="canyon.jpg" alt="Grand Canyon" class="trip-img">
+    <div class="trip-overlay">
+      <h3 class="trip-title">Grand Canyon & Ouest Américain</h3>
+      <p class="trip-subtitle">19 jours / 17 nuits — à partir de 3100 €</p>
+    </div>
+  </div>
+
+  <div class="trip-card">
+    <img src="NY.jpg" alt="New York" class="trip-img">
+    <div class="trip-overlay">
+      <h3 class="trip-title">New York & Côte Est</h3>
+      <p class="trip-subtitle">7 jours / 6 nuits — à partir de 2200 €</p>
+    </div>
+  </div>
+
+  <!-- Ajoute autant de cartes que nécessaire -->
+</section>
+
+
 
 </body>
 </html>
