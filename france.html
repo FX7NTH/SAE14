@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voyages USA</title>
+  <link rel="stylesheet" href="france.css">
+  <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="close-container" onclick="window.location.href='index.html';">
+      <i class="fa-regular fa-circle-xmark fa-2x"></i>
+      <span>FERMER</span>
+    </div>
+  </header>
+
+<section class="hero">
+  <h1>Nos idées de voyage en France</h1>
+
+  <div class="filters"> 
+    <span class="filter-title">FILTRER</span>
+
+    
+    <div class="dropdown">
+      <button class="filter-btn">PAR RÉGION <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Provence-Alpes-Côte d'Azur</button>
+        <button class="filter-option">Bretagne</button>
+        <button class="filter-option">Normandie</button>
+        <button class="filter-option">Occitanie</button>
+        <button class="filter-option">Alsace</button>
+        <button class="filter-option">Corse</button>
+        <button class="filter-option">Île-de-France</button>
+        <button class="filter-option">Aquitaine</button>
+        <button class="filter-option">Les Alpes</button>
+      </div>
+    </div>
+
+  
+    <div class="dropdown">
+      <button class="filter-btn">PAR MOIS <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Janvier</button>
+        <button class="filter-option">Février</button>
+        <button class="filter-option">Mars</button>
+        <button class="filter-option">Avril</button>
+        <button class="filter-option">Mai</button>
+        <button class="filter-option">Juin</button>
+        <button class="filter-option">Juillet</button>
+        <button class="filter-option">Août</button>
+        <button class="filter-option">Septembre</button>
+        <button class="filter-option">Octobre</button>
+        <button class="filter-option">Novembre</button>
+        <button class="filter-option">Décembre</button>
+      </div>
+    </div>
+
+  
+    <div class="dropdown">
+      <button class="filter-btn">PAR BUDGET <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Moins de 1000 €</button>
+        <button class="filter-option">1000 à 1500 €</button>
+        <button class="filter-option">1500 à 2000 €</button>
+        <button class="filter-option">2000 à 3000 €</button>
+        <button class="filter-option">3000 € et plus</button>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="filter-btn">PAR DURÉE <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Moins de 4 jours</button>
+        <button class="filter-option">De 4 à 7 jours</button>
+        <button class="filter-option">De 7 à 15 jours</button>
+        <button class="filter-option">15 jours à plus</button>
+      </div>
+    </div>
+
+    <span class="sort-title">TRIER PAR</span>
+
+    <button class="filter-btn active">
+      <i class="fa-solid fa-crown"></i> POPULARITÉ <span class="arrow">▼</span>
+    </button>
+
+    <button class="filter-btn active"><i class="fa-regular fa-calendar"></i>DURÉE <span class="arrow">▼</span></button>
+    <button class="filter-btn active">€ PRIX <span class="arrow">▼</span></button>
+
+  </div>
+</section>
+    
+
+<section class="trips-grid">
+
+    <div class="trip-card portrait">
+        <img src="toulouse.jpg" alt="Toulouse" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Toulouse, la ville rose</h3>
+            <p class="trip-soustitre">6 jours / 5 nuits| à partir de 950 €</p>
+        </div>
+    </div>
+
+    <div class="trip-card carre">
+        <img src="chamonix.jpg" alt="Chamonix" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Chamonix, L'aventure au pied du Mont Blanc</h3>
+            <p class="trip-soustitre">7 jours / 6 nuits| à partir de 1800 €</p>
+        </div>
+    </div>
+
+    <div class="trip-card portrait">
+        <img src="disney.jpg" alt="Disneyland Paris" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Disneyland Paris, vivez la magie à chaque instant</h3>
+            <p class="trip-soustitre">4 jours / 3 nuits | à partir de 900 €</p>
+        </div>
+    </div>
+  
+    <div class="trip-card carre">
+        <img src="PARIS.jpg" alt="Paris" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Paris, la capitale</h3>
+            <p class="trip-soustitre">5 jours / 4 nuits| à partir de 900 €</p>
+        </div>
+    </div>
+
+    <div class="trip-card carre">
+        <img src="ajaccio.jpg" alt="Ajaccio " class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Ajaccio, sous le soleil de Corse</h3>
+            <p class="trip-soustitre">7 jours / 6 nuits | à partir de 1400 €</p>
+        </div>
+    </div>
+
+    <div class="trip-card paysage">
+        <img src="strasbourg.jpg" alt="Strasbourg" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Strasbourg, Au coeur de l’Alsace, entre tradition et modernité</h3>
+            <p class="trip-soustitre">5 jours / 4 nuits | à partir de 850 €</p>
+        </div>
+    </div>
+
+ 
+
+    <div class="trip-card paysage">
+        <img src="monaco.jpg" alt="Monaco" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Monaco, Luxe, élégance et vue sur la mer</h3>
+            <p class="trip-soustitre">5 jours / 4 nuits | à partir de 1500 €</p>
+        </div>
+     </div>
+
+  
+    <div class="trip-card carre">
+        <img src="annecy.jpg" alt="Annecy" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Annecy, Le lac d'azur et les montagnes</h3>
+            <p class="trip-soustitre">5 jours / 4 nuits | à partir de 950 €</p>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
