@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voyages Japon</title>
+  <link rel="stylesheet" href="japon.css">
+  <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="close-container" onclick="window.location.href='index.html';">
+      <i class="fa-regular fa-circle-xmark fa-2x"></i>
+      <span>FERMER</span>
+    </div>
+  </header>
+
+<section class="hero">
+  <h1>Nos idées de voyage au Japon</h1>
+
+  <div class="filters"> 
+    <span class="filter-title">FILTRER</span>
+
+    
+    <div class="dropdown">
+      <button class="filter-btn">PAR RÉGION <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Sud-ouest</button>
+        <button class="filter-option">Kanto</button>
+        <button class="filter-option">Nord</button>
+        <button class="filter-option">Okinawa et les îles du sud</button>
+        <button class="filter-option">Alpes japonaises</button>
+      </div>
+    </div>
+
+  
+    <div class="dropdown">
+      <button class="filter-btn">PAR MOIS <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Janvier</button>
+        <button class="filter-option">Février</button>
+        <button class="filter-option">Mars</button>
+        <button class="filter-option">Avril</button>
+        <button class="filter-option">Mai</button>
+        <button class="filter-option">Juin</button>
+        <button class="filter-option">Juillet</button>
+        <button class="filter-option">Août</button>
+        <button class="filter-option">Septembre</button>
+        <button class="filter-option">Octobre</button>
+        <button class="filter-option">Novembre</button>
+        <button class="filter-option">Décembre</button>
+      </div>
+    </div>
+
+  
+    <div class="dropdown">
+      <button class="filter-btn">PAR BUDGET <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Moins de 1000 €</button>
+        <button class="filter-option">1000 à 1500 €</button>
+        <button class="filter-option">1500 à 2000 €</button>
+        <button class="filter-option">2000 à 3000 €</button>
+        <button class="filter-option">3000 € et plus</button>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="filter-btn">PAR DURÉE <span class="arrow">▼</span></button>
+      <div class="dropdown-content">
+        <button class="filter-option">Moins de 4 jours</button>
+        <button class="filter-option">De 4 à 7 jours</button>
+        <button class="filter-option">De 7 à 15 jours</button>
+        <button class="filter-option">15 jours à plus</button>
+      </div>
+    </div>
+
+    <span class="sort-title">TRIER PAR</span>
+
+    <button class="filter-btn active">
+      <i class="fa-solid fa-crown"></i> POPULARITÉ <span class="arrow">▼</span>
+    </button>
+
+    <button class="filter-btn active"><i class="fa-regular fa-calendar"></i>DURÉE <span class="arrow">▼</span></button>
+    <button class="filter-btn active">€ PRIX <span class="arrow">▼</span></button>
+
+  </div>
+</section>
+    
+
+<section class="trips-grid">
+
+    <div class="trip-card paysage">
+        <img src="kyoto.jpg" alt="Kyoto" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Kyoto, Voyage dans le temps, au cœur de l’histoire</h3>
+            <p class="trip-soustitre">6 jours / 5 nuits | à partir de 1100 €</p>
+        </div>
+    </div>
+
+
+    <div class="trip-card carre">
+        <img src="osaka.jpg" alt="Osaka" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Osaka, L'âme gourmande du Japon</h3>
+            <p class="trip-soustitre">4 jours / 3 nuits| à partir de 900 €</p>
+        </div>
+    </div>
+
+    <div class="trip-card portrait">
+        <img src="tokyo.jpg" alt="Tokyo" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Tokyo, Le cœur palpitant du Japon</h3>
+            <p class="trip-soustitre">8 jours / 7 nuits | À partir de 1800 €</p>
+        </div>
+    </div>
+
+    <div class="trip-card paysage">
+        <img src="hiroshima.jpg" alt="Hiroshima" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Hiroshima, Un message de paix et d'espoir</h3>
+            <p class="trip-soustitre">4 jours / 3 nuits | à partir de 900 €</p>
+        </div>
+    </div>
+  
+    <div class="trip-card carre">
+        <img src="sapporo.jpg" alt="Sapporo" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Sapporo, Sous la neige, la magie opère</h3>
+            <p class="trip-soustitre">6 jours / 5 nuits | à partir de 1000 €</p>
+        </div>
+    </div>
+    
+    <div class="trip-card portrait">
+        <img src="nara.jpg" alt="Nara" class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Nara, À la rencontre des cerfs sacrés</h3>
+            <p class="trip-soustitre">5 jours / 4 nuits | à partir de 950 €</p>
+        </div>
+    </div>
+
+    <div class="trip-card paysage">
+        <img src="fuko.jpg" alt="Fukuoka " class="trip-img">
+        <div class="overlay"></div>
+        <div class="trip-overlay">
+            <h3 class="trip-titre">Fukuoka, L’énergie d’une ville cosmopolite</h3>
+            <p class="trip-soustitre">8 jours / 7 nuits | à partir de 1100 €</p>
+        </div>
+    </div>
+
+    
+
+</section>
+
+</body>
+</html>
