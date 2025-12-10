@@ -323,7 +323,7 @@ main {
   font-size: 20px;                           
 }
 
-/* Effet au survol des boutons */
+
 .extra-btn:hover {
   background-color: rgba(255, 95, 0, 0.6); 
   transform: scale(1.05); 
@@ -333,7 +333,6 @@ main {
   outline: none; 
 }
 
-/* Rond avec le texte */
 .destination-circle {
   position: fixed;
   bottom: 5%;  
