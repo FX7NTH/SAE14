@@ -36,12 +36,12 @@ body {
   transition: 0.2s;
 }
 
-.hero {
+.titre {
   text-align: center;
   margin-top: 40px;
 }
 
-.hero h1 {
+.titre h1 {
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 40px;
