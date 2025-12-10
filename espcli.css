@@ -1,0 +1,394 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    :root {
+      --primary-color: rgb(255, 115, 0);
+      --secondary-color: #ffffff;
+      --dark-bg: rgb(1, 7, 94);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;700&display=swap');
+
+    body {
+      background-image: url('NY.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.0001);
+      backdrop-filter: blur(3px);
+      color: #fff;
+    }
+
+    .header-left .destination-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 11px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .header-left .destination-btn:hover {
+      color: var(--primary-color);
+    }
+
+    .header-right a {
+      color: white;
+      margin-left: 20px;
+      font-size: 22px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .header-right a:hover {
+      color: var(--primary-color);
+    }
+
+    .menu-icon {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-size: 22px;
+      margin-left: 35px;
+    }
+
+    .menu-icon:hover {
+      color: var(--primary-color);
+    }
+
+    /* SIDE MENU */
+    #side-menu {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 350px;
+      height: 100vh;
+      background-color: #fff;
+      box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      transition: right 0.4s ease;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    #side-menu.active {
+      right: 0;
+    }
+
+    #side-menu ul {
+      list-style: none;
+      margin-top: 40px;
+    }
+
+    #side-menu li {
+      margin: 18px 0;
+    }
+
+    #side-menu a {
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    #side-menu a:hover {
+      color: var(--primary-color);
+    }
+
+    .menu-title {
+      margin-top: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: grey;
+      font-weight: bold;
+    }
+
+    .close-menu {
+      background: none;
+      border: none;
+      font-size: 26px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    #menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 900;
+      display: none;
+    }
+
+    #menu-overlay.active {
+      display: block;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 20px 60px;
+      min-height: 100vh;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .page-title h1 {
+      font-size: 65px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    .page-title h1 span {
+      color: var(--primary-color);
+    }
+
+    .page-title p {
+      font-size: 20px;
+      color: #f3f3f3;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* CARDS CONTAINER */
+    .cards-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .client-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .client-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(255, 115, 0, 0.4);
+    }
+
+    .card-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, var(--primary-color), rgb(255, 95, 0));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: white;
+      box-shadow: 0 5px 15px rgba(255, 115, 0, 0.3);
+    }
+
+    .client-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .client-card p {
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .card-btn {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 12px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      border: 2px solid var(--primary-color);
+    }
+
+    .card-btn:hover {
+      background: transparent;
+      color: var(--primary-color);
+      letter-spacing: 2px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 60px 20px;
+      margin: 60px auto;
+      max-width: 1200px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 50px;
+      color: #1a1a1a;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .contact-section h2 span {
+      color: var(--primary-color);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .contact-card h4 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .contact-card p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .contact-card a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: rgb(255, 95, 0);
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer p {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .page-title h1 {
+        font-size: 45px;
+      }
+
+      .page-title p {
+        font-size: 16px;
+      }
+
+      .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-section {
+        margin: 40px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-title h1 {
+        font-size: 35px;
+      }
+
+      .client-card {
+        padding: 30px 20px;
+      }
+
+      .card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+      }
+    }
