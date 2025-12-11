@@ -135,8 +135,7 @@ body {
 }
 
 
-.filter-btn,
-.filter-option,{
+.filter-btn.filter-option{
   white-space: nowrap; 
 }
 
