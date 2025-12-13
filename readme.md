@@ -1,4 +1,4 @@
-#  NathVoyage — Site Web de Voyages
+#  NathVoyage | Site Web de Voyages
 
 ## 📌 Présentation du projet
 
