@@ -333,36 +333,6 @@ main {
   outline: none; 
 }
 
-.destination-circle {
-  position: fixed;
-  bottom: 5%;  
-  left: 80%;    
-  transform: translateX(-50%); 
-  width: 230px; 
-  height: 230px; 
-  background-color: rgb(124, 122, 119); 
-  border-radius: 50%; 
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  color: white; 
-  font-size: 20px; 
-  font-weight: bold;
-  text-align: center;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
-  cursor: pointer;
-  z-index: 100; 
-  transition: transform 0.3s ease, background-color 0.3s ease; 
-}
-
-
-.destination-circle:hover {
-  background-color: rgba(255, 115, 0, 1); 
-  transform: translateX(-50%) scale(1.1); 
-}
-
-
 .destination-text {
   font-size: 16px; 
   text-transform: uppercase; 
