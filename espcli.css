@@ -15,7 +15,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;700&display=swap');
 
     body {
-      background-image: url('NY.jpg');
+      background-image: url('image/NY.jpg');
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;
